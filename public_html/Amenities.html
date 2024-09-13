@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="5.3 task " content="Website">
+        <meta name="author" content="Omer Steinberg">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/Amenities.css">
+        <link rel="stylesheet" href="css/Footer.css">
+        <script src="Javascript/Navbar.js"></script>
+        <script src="Javascript/Slideshow.js"></script>
+        <script src="Javascript/NavigateHome.js"></script>
+        <title> Serenity </title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="nav_container">
+            <nav class="navbar">
+                
+                <!-- Logo -->
+                <div class="logo" onclick="navigateToPage('Home.html')" style="cursor: pointer;">
+                    <img src="images/dove.png" alt="Dove icon">
+                    <p>Serenity</p>
+                </div>
+
+                <!-- Hamburger Menu Icon -->
+                <div class="hamburger" id="hamburger">
+                    &#9776; <!-- Unicode character for the hamburger icon -->
+                </div>
+                            
+                <div class="nav-menu" id="navMenu"> <!-- New wrapper for nav links and actions -->
+                    <!-- Navigation Links -->
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="RoomsSuites.html">Rooms & Suites</a></li>
+                        <li><a href="Amenities.html">Amenities</a></li>
+                        <li><a href="ContactUs.html">Contact Us</a></li>
+                    </ul>
+                        
+                        <!-- Actions (Search Icon and Book Button) -->
+                    <div class="actions">
+                        <img src="images/search.png" alt="search icon" class="search-icon">
+                        <button class="book-button">Book a Stay</button>
+                    </div>
+                </div>
+            </nav>
+        </header> 
+        
+        <!-- Hero Section with Slideshow -->
+        <div class="hero-section">
+            <!-- Slideshow Container -->
+            <div class="slideshow-container">
+                <!-- Slide 1 -->
+                <div class="mySlides fade">
+                    <img src="images/pexels-askar-abayev-5638747.jpg" alt="Luxury Room View">
+                </div>
+    
+                <!-- Slide 2 -->
+                <div class="mySlides fade">
+                    <img src="images/pexels-rdne-6724402.jpg" alt="Elegant Suite">
+                </div>
+    
+                <!-- Slide 3 -->
+                <div class="mySlides fade">
+                    <img src="images/movie-theater-4213751_1920.jpg" alt="Oceanfront Suite">
+                </div>
+            </div>
+    
+            <!-- Hero Text Content -->
+            <div class="hero-text">
+                <h1>Amenities</h1>
+                <p>Everything you need for a perfect stay!</p>
+            </div>
+    
+            <!-- Dots/Indicators -->
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        </div>       
+        
+        <div class="amenities-container">
+            <!-- Card 1: Spa and Wellbeing -->
+            <div class="amenity-card">
+                <div class="amenity-image">
+                    <img src="images/pexels-rdne-6724402.jpg" alt="Spa and Wellbeing">
+                </div>
+                <div class="amenity-content">
+                    <h2>Spa and Wellbeing</h2>
+                    <p>Indulge in our luxurious spa treatments and wellness programs designed to rejuvenate your mind, body, and soul.</p>
+                    <a href="#" class="amenity-link">Explore More &rarr;</a>
+                </div>
+            </div>
+        
+            <!-- Card 2: Drink & Dine -->
+            <div class="amenity-card">
+                <div class="amenity-image">
+                    <img src="images/pexels-askar-abayev-5638747.jpg" alt="Drink and Dine">
+                </div>
+                <div class="amenity-content">
+                    <h2>Drink & Dine</h2>
+                    <p>Experience exquisite dining and delightful drinks at our restaurants and bars, offering a variety of local and international cuisines.</p>
+                    <a href="#" class="amenity-link">Explore More &rarr;</a>
+                </div>
+            </div>
+        
+            <!-- Card 3: Entertainment -->
+            <div class="amenity-card">
+                <div class="amenity-image">
+                    <img src="images/movie-theater-4213751_1920.jpg" alt="Entertainment">
+                </div>
+                <div class="amenity-content">
+                    <h2>Entertainment</h2>
+                    <p>Enjoy a range of entertainment options, from live music and performances to exciting recreational activities.</p>
+                    <a href="#" class="amenity-link">Explore More &rarr;</a>
+                </div>
+            </div>
+        </div>
+       
+
+        <footer class="footer-links">
+            <div class="footer-navigation">
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+            </div>
+            <div class="footer-social-icons">
+                <a href="https://www.linkedin.com" class="icon">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.facebook.com" class="icon">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com" class="icon">
+                    <img src="images/social (1).png" alt="Instagram">
+                </a>
+            </div>
+        </footer>
+        
+        <script src="Javascript/Navbar.js"></script>
+        <script src="Javascript/Slideshow.js"></script>
+
+    </body>
+</html>   

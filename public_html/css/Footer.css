@@ -1,0 +1,160 @@
+/* Newsletter Section Styling */
+.newsletter-section {
+  padding: 40px 20px; /* Padding around the section */
+  text-align: center;
+  border-radius: 8px; /* Rounded corners */
+  margin: 40px auto; /* Center section */
+  max-width: 800px; /* Restrict maximum width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter-section h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #f3b07a;
+}
+
+.newsletter-section p {
+  font-size: 1.2em;
+  margin-bottom: 50px;
+  color: #000000; 
+}
+
+
+.newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between input and button */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  margin-top: 20px;
+}
+
+.newsletter label {
+  display: flex;
+  align-items: center;
+  color: #f3b07a; /* Light grey for input label */
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.newsletter input{
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ffffff; /* Initial border color */
+  border-radius: 5px;
+  outline: none;
+  margin-top: 5px;
+  width: 200px; /* Fixed width */
+  box-shadow: 0 2px 4px rgba(133, 133, 133, 0.1); /* Subtle shadow */
+}
+
+.newsletter input:hover,
+.newsletter input:focus{
+  border-color: #F4C095;
+}
+
+/* Newsletter Button*/
+.newsletter-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #f3b07a; 
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.newsletter-button:hover {
+  background-color: #cc6f23; /* Darker shade for hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 924px) {
+  .newsletter {
+      flex-direction: row;
+      gap: 10px; /* Increased gap for spacing */
+  }
+
+  .newsletter label{
+    margin-right: 5px;
+  }
+  
+
+}
+
+/* Footer Styling */
+.footer-links {
+  background-color: #333;
+  opacity: 0.9;
+  color: #ffffff;
+  padding: 20px 0; /* Vertical padding for space */
+  display: flex;
+  flex-direction: column;
+  text-align: center; /* center all text and elements of the footer */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer Navigation Links */
+.footer-navigation {
+  margin-bottom: 15px;
+}
+
+.footer-navigation a {
+  color: #EDEDED; 
+  margin: 0 15px; /* Spacing between links */
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer-navigation a:hover {
+  color: #F4C095; /* Warm sand color for hover effect */
+}
+
+/* Footer Social Icons */
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Space between icons */
+}
+
+.footer-social-icons .icon {
+  display: inline-block;
+  width: 40px; /* Icon width */
+  height: 40px; /* Icon height */
+  margin: 0 10px; /* Margin between icons */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.footer-social-icons .icon:hover {
+  transform: scale(1.2); /* Slight enlargement on hover */
+}
+
+/* Adjust icon image size */
+.footer-social-icons .icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure the image fits within the icon size */
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .footer-links {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .footer-navigation a {
+      display: block; 
+      margin: 5px 0;
+  }
+
+  .footer-social-icons {
+      margin-top: 10px;
+  }
+}

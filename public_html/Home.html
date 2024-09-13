@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="5.3 task " content="Website">
+        <meta name="author" content="Omer Steinberg">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/Home.css">
+        <link rel="stylesheet" href="css/navbarHome.css">
+        <link rel="stylesheet" href="css/Footer.css">
+        <script src="Javascript/Navbar.js"></script>
+        <script src="Javascript/Animate.js"></script>
+        <script src="Javascript/NavigateHome.js"></script>
+        <title> Serenity </title>
+    </head>    
+
+
+    <body>
+        <div class="video-background-container">
+            <!-- Video Background -->
+            <video autoplay muted loop class="video-background">
+                <source src="videos/header_video1.mp4" type="video/mp4">
+            </video>
+            
+            <!-- Heading Overlay -->
+            <div class="video-heading">
+                <h1>Escape to Paradise</h1>
+                <p>Discover serenity by the sea</p>
+                <button href="RoomsSuites.html" class="header-button">Start Your Journey</button>
+            </div>
+
+            <!-- Header -->
+            <header class="nav_container">
+                <nav class="navbar">
+                
+                    <!-- Logo -->
+                    <div class="logo" onclick="navigateToPage('Home.html')" style="cursor: pointer;">
+                        <img src="images/dove.png" alt="Dove icon">
+                        <p>Serenity</p>
+                    </div>
+
+                    <!-- Hamburger Menu Icon -->
+                    <div class="hamburger" id="hamburger">
+                        &#9776; <!-- Unicode character for the hamburger icon -->
+                    </div>
+                            
+                    <div class="nav-menu" id="navMenu"> <!-- New wrapper for nav links and actions -->
+                        <!-- Navigation Links -->
+                        <ul class="nav-links" id="navLinks">
+                            <li><a href="RoomsSuites.html">Rooms & Suites</a></li>
+                            <li><a href="Amenities.html">Amenities</a></li>
+                            <li><a href="ContactUs.html">Contact Us</a></li>
+                        </ul>
+                        
+                        <!-- Actions (Search Icon and Book Button) -->
+                        <div class="actions">
+                            <img src="images/search.png" alt="search icon" class="search-icon">
+                            <button class="book-button">Book a Stay</button>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>        
+        
+        <!--About Section-->
+        <div class="hidden">
+            <section class="about-section">
+                <div class="about-content">
+                    <div class="text-block">
+                        <h2>ABOUT US</h2>
+                        <p>Welcome to Serenity, your perfect escape to paradise.
+                        Nestled along the pristine shores, we offer a sanctuary where you can unwind, 
+                        relax, and rejuvenate. Our boutique hotel is designed to blend luxury and comfort seamlessly, 
+                        providing an unforgettable experience that will leave you feeling refreshed.
+                        From breathtaking ocean views to exclusive amenities, we pride ourselves on 
+                        offering personalized service and a serene atmosphere. Whether you are here for a 
+                        romantic getaway, a family vacation, or a solo retreat, Serenity promises to make 
+                        your stay memorable.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/palm.jpg" alt="Image">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!--Featured Section-->
+        <div class="hidden">
+            <section class="featured-sections">
+                <h2>FEATURED SECTIONS</h2>
+                <div class="featured-items">
+                    <!--Card 1-->
+                    <div class="card" onclick="location.href='RoomsSuites.html';">
+                        <img src="images/rooms.jpg" alt="Rooms & Suites">
+                        <div class="card-content">
+                            <h3>Rooms & Suites</h3>
+                            <p>Discover our luxurious rooms and suites designed for ultimate comfort and relaxation.</p>
+                        </div>
+                    </div>
+            
+                    <!-- Card 2 -->
+                    <div class="card" onclick="location.href='Amenities.html';">
+                        <img src="images/beach.jpg" alt="Amenities">
+                        <div class="card-content">
+                            <h3>Amenities</h3>
+                            <p>Explore our world-class amenities, from spa treatments to fine dining experiences.</p>
+                        </div>
+                    </div>
+            
+                    <!-- Card 3 -->
+                    <div class="card" onclick="location.href='ContactUs.html';">
+                        <img src="images/inquire.jpg" alt="Contact Us">
+                        <div class="card-content">
+                            <h3>Inquire Now</h3>
+                            <p>Get in touch with us for any inquiries, reservations, or special requests.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+            
+        <div class="hidden">
+            <div class="newsletter-section">
+                <h3>NEWSLETTER</h3> 
+                <p> Subscribe to our newsletter to get the latest offers!</p>               
+                <div class="newsletter">
+                    <label for="email">Email</label>
+                        <input type="email" id="email" name="email"> 
+                    <button type="submit" class="newsletter-button">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer-links">
+            <div class="footer-navigation">
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+            </div>
+            <div class="footer-social-icons">
+                <a href="https://www.linkedin.com" class="icon">
+                    <img src="images/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.facebook.com" class="icon">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com" class="icon">
+                    <img src="images/social (1).png" alt="Instagram">
+                </a>
+            </div>
+        </footer>
+        <script src="Javascript/Navbar.js"></script>
+    </body>
+</html>

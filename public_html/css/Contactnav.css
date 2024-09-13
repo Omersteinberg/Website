@@ -1,0 +1,211 @@
+/* Navbar Styles */
+.nav_container {
+    width: 100%;
+    background-color: rgba(71,71, 71, 1); /* Semi-transparent dark background */
+    padding: 10px 20px;
+    position: relative; /* Keeps the navbar at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the navbar stays above other content */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    width: inherit;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hide by default */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    margin-left: auto; /* Align hamburger icon to the right */
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    filter: brightness(0) invert(1);
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.logo p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; 
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto ;
+    margin-right: 50px;
+}
+
+/*Displays the links horizontally from each other*/
+.nav-links li{
+    display: inline-block;    
+    text-align: center;
+    padding: 15px 25px;
+    position: relative;    
+}
+
+.nav-links li a{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 5px 0px;
+    text-decoration:none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/*The hidden line that is created using the hover effect */
+.nav-links li a::after{
+    content: '';
+    background-color: #F4C095;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+}
+
+.nav-links li a:hover{
+    color:#F4C095;
+    transition: 0.5s;
+}
+
+/*When on hover, the line transitions across the bottom of the link with the hover colour*/
+.nav-links li a:hover::after{
+    width: 100%;
+}
+
+/* Actions (Search Icon and Book Button) */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between search icon and button */
+}
+
+.search-icon {
+    height: 24px; /* Adjust height for better alignment */
+    width: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+    filter: invert(100%);
+    transition: filter 0.3s; /* Smooth transition for hover effect */
+}
+
+.search-icon:hover {        /* Search icon colour to slightly match the hover effect on the links */
+    filter: brightness(0) saturate(100%) invert(85%) sepia(25%) saturate(3500%) hue-rotate(5deg) brightness(105%) contrast(95%);
+}
+
+.book-button {
+    background-color: #f3b07a;
+    color: #fff;
+    border: none;
+    padding: 8px 20px; /* Adjust padding for a sleeker look */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+    margin-right: 50px;
+}
+
+.book-button:hover {
+    background-color: #cc6f23; /* hover effect */
+}
+
+/* Responsive Adjustments */
+/*When the screen is reduced to a size smaller than 924px wide:*/
+@media (max-width: 924px) {
+
+    .nav_container {
+        flex-direction: column; /* Stacks elements vertically */
+        align-items: flex-start; /* Aligns items to the left */
+        padding: 10px 20px;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu on smaller screens */
+        font-size: 35px; /* Larger font size for better visibility */
+        color: white;
+        position: absolute; /* Keeps it at the correct position at all times (right of the page) */
+        right: 70px;
+        top: 10spx; /* Aligns it with the navbar */
+        z-index: 1001; /* Ensures it is above other content */
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        display: none; /* Hide menu by default */
+        flex-direction: column; /*When menu is opened it is displayed in a column*/
+        width: 100%;
+        align-items: flex-start;
+        padding: 10px 0;
+        position: absolute; /* Position it absolutely to ensure it appears below the navbar */
+        top: 90px; /*When clicked it is displayed right below the navbar*/
+        left: 0;
+        background-color: rgba(185, 221, 255, 0.8); /* Add background to make it visible */
+        z-index: 1000; /* Make sure it appears above other content */
+        max-height: 0; /* Hide by default */
+        overflow: hidden; /* Ensure content does not overflow */
+        transition: max-height 0.3s ease; /* Smooth transition for opening and closing */
+    }
+
+    .nav-menu.active {
+        display: flex;
+        max-height: 300px; /* Content's total height */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        padding: 10px 20px;
+        text-align: left;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+
+    .book-button {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}

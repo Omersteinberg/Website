@@ -1,0 +1,293 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Philosopher', sans-serif;
+    overflow-x: hidden;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Adjusts the height of the hero section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slideshow-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensures slideshow is behind the text */
+}
+
+/* Slide styling */
+.mySlides {
+    display: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Ensure images fills the page on all screen sizes */
+.mySlides img {
+    object-fit: cover; 
+    height: 100%;
+    width: 100%;
+}
+
+/* Fade animation for the slides */
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: .5} 
+    to {opacity: 1}
+}
+
+/* Text Content for Hero Section */
+.hero-text {
+    position: relative;
+    z-index: 2; /* Ensures text is above slideshow */
+    text-align: center;
+    background-color: white; /*Background for better readability*/
+    opacity: 0.9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 0 0 2px rgb(0,0,0,0.2),
+    0 0 0 3px #f3b07a;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    margin: 0;
+    color:#f3b07a;
+    text-shadow: 2px 2px #ff8800;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+/* Dot indicators */
+.dot-container {
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    z-index: 2; /* Ensures dots are above the slides */
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color:#f3b07a;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #ffffff; /* White color on active or hover */
+}
+
+/* Rooms Container */
+.rooms-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Space between each room card */
+    padding: 40px;
+    width: 100%; /* Full width for the container */
+}
+
+/* Individual Room Card Styling */
+.room-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #f8f4ef; /* Light background color for each card */
+    width: 70%; /* Cards take up 80% of the container width */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: relative;
+    gap: 20px;
+}
+
+/* Room Content */
+.room-content {
+    flex: 1; /* Takes up available space */
+    padding-right: 20px; /* Space between text and image */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    gap: 10px; /* Space between title, text, and links */
+}
+
+.room-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.room-content p {
+    font-size: 16px;
+}
+
+.tings {
+    margin-top: 10px; /* Adds some space above the features section */
+    margin-bottom: 10px;
+    display: flex;
+    gap: 20px; /* Adds space between each feature */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    align-items: center; /* Centers the items vertically */
+}
+
+.room-icons {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666; /* Muted color for the features */
+    margin-bottom: 5px; /* Space below each feature for wrapping */
+}
+
+.room-icons img {
+    height: 20px; /* Adjust icon size */
+    width: 20px;
+    margin-right: 5px; /* Adds space between icon and text */
+}
+
+.discover {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+}
+
+.discover a {
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none; /* Removes default underline */
+    color: #333;
+    position: relative; /* Allows positioning of the arrow */
+    padding-right: 20px; /* Space for the arrow */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.discover a::after {
+    content: '→'; /* Arrow symbol */
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: transform 0.3s;
+}
+
+.discover a:hover{
+    color: #f3b07a;
+}
+
+.discover a:hover::after {
+    transform: translateX(5px);
+}
+
+.room-content button {
+    padding: 10px 20px;
+    border: 2px solid #333;
+    background-color: transparent;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 550;
+    transition: background-color 0.3s, color 0.3s;
+    align-self: flex-start;
+}
+
+.room-content button:hover {
+    background-color: black;
+    color: #fff;
+}
+
+/* Room Image */
+.room-image {
+    flex: 1; /* Takes up available space */
+}
+
+.room-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1000px) {
+    .room-card {
+        flex-direction: column; /* Stack elements vertically on medium screens */
+        align-items: center;
+        width: 90%; /* Take more space on medium screens */
+    }
+
+    .room-image {
+        max-width: 100%; /* Full width for images on smaller screens */
+        margin-bottom: 20px; /* Adds space below the image */
+    }
+
+    .room-content {
+        padding-right: 0; /* Remove padding for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .room-content h2 {
+        font-size: 24px; /* Smaller font size for smaller screens */
+    }
+
+    .room-content p {
+        font-size: 14px; /* Smaller text size for better readability */
+    }
+
+    .room-icons {
+        font-size: 12px; /* Smaller icon text for smaller screens */
+    }
+
+    .rooms-container {
+        padding: 20px; /* Less padding for smaller screens */
+    }
+
+    .hero-text h1{
+        font-size: 40px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+}
+
+/*When elements scroll into view*/
+.hidden {
+    opacity: 0; /* Start transparent */
+    filter: blur(5px);
+    transform: translateY(40px); /* Slightly offset below */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out; /* Smooth transition for both opacity and position */
+  }
+  
+  /*When element is in view */
+  .show {
+    opacity: 1; /* Fully visible */
+    filter: blur(0);
+    transform: translateY(0); /* Reset position */
+  }
